@@ -32,7 +32,7 @@ Transaction = apps.get_model(app_label=app_name, model_name=model_name)
 logger = logging.getLogger(__name__)
 
 
-class PaymentRequestMixin(object):
+class PaymentRequestMixin(View):
     def sign_request(self, params, url_to_sign):
         token = None
 
